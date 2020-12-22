@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="assets/style/home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+<body>
+    <section class="main-wrapper">
+        <section class="home-page-wrapper visible">
+            <h1>Hello</h1>
+            <div class="main-pic"><img src="assets/img/main_pic.svg" alt="main_pic"></div>
+            <form action="" id="user-verification">
+                <label for="user-name">Please enter your name:</label>
+                <input type="text" id="user-name">
+            </form>
+            <h2>Track your activities</h2>
+            <h3>Accomplish your goals</h3>
+            <button id="lets-go">Let's Go</button>
+        </section>
+        <section class="to-do-page-wrapper">
+            <i id="add-task" class="fas fa-plus-circle visible"></i>
+            <header>
+                <div class="avatar">
+                  <img src="assets/img/avatar.png" alt="avatar">  
+                </div>
+                <div class="hello-msg">
+                    <h2>Hello <span id="nameID"></span></h2>
+                </div>
+            </header>
+            <section class="progress">
+                <h2>Your progress <span id="done-task">0</span>/<span id="task-number">0</span></h2>
+                <progress id="progress-bar" value="" max="100"></progress> 
+            </section>
+            <ul class="to-do-list-section">
+                <form class="to-do-list-add-modal">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title">
+                    <label for="description">Description:</label>
+                    <textarea type="text" id="description" maxlength="100"></textarea>
+                    <label for="time">Time:</label>
+                    <input type="text" id="time">
+                    <div class="to-do-list-confirmation">
+                        <input type="button" id="add-list" value="ADD">
+                        <input type="button" id="cancel-add-list" value="CANCEL">
+                    </div>  
+                </form>
+                <!-- <li class="visible">
+                    <i  class="fas fa-check check-task"></i>
+                    <i  class="fas fa-times remove-task"></i>
+                    <h4>Title:</h4>
+                    <p>${titleInputValue}</p>
+                    <h4>Description:</h4>
+                    <p>${descriptionInputValue}</p>
+                    <h4>Time:</h4>
+                    <p>${timeInputValue}</p>
+                </li>       -->
+            </ul>
+        </section>
+    </section>
+    <script src="assets/script/app.js"></script>
+</body>
+</html>
