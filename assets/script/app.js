@@ -15,15 +15,14 @@ const doneTaskNo = document.getElementById('done-task');
 const taskNo = document.getElementById('task-number');
 const progressBar = document.getElementById('progress-bar');
 
-
-
 const updateUi = () => {
-  const toDoList = document.querySelectorAll(".to-do-list-section li");
-  const toDoListChecked = document.querySelectorAll(".to-do-list-section .task-checked");
+  const toDoList = document.querySelectorAll('.to-do-list-section li');
+  const toDoListChecked = document.querySelectorAll('.to-do-list-section .task-checked');
+  
   if (toDoList.length > 0) {
-    toDoListSection.classList.remove("visible-background");
+    toDoListSection.classList.remove('visible-background');
   } else {
-    toDoListSection.classList.add("visible-background");
+    toDoListSection.classList.add('visible-background');
   } // Updates if background image will be visible
 
   taskNo.textContent = toDoList.length;
@@ -37,21 +36,21 @@ const updateUi = () => {
   progressBar.value = progressValue; //progressbar update
 };
 
+const clearUserInput = () => {
+    titleInput.value = '';
+    descriptionInput.value = '';
+    timeInput.value = '';
+};
+
 const openToDoListSectionHandler = () => {
     const userNameInputValue = userNameInput.value;
-    if(userNameInputValue.trim() === ""){
+    if(userNameInputValue.trim() === ''){
         alert('Please enter valid name');
         return;
     }
     homePage.classList.toggle('visible');
     toDoPage.classList.toggle('visible');
     userName.textContent = `${userNameInputValue}`;
-};
-
-const clearUserInput = () => {
-    titleInput.value = '';
-    descriptionInput.value = '';
-    timeInput.value = '';
 };
 
 const toDoListAddModalHandler = () => {
@@ -63,6 +62,7 @@ const toDoListAddModalHandler = () => {
     addTaskBtn.classList.toggle('visible');
     clearUserInput();
 };
+
 const addToDoList = () => {
     const toDoList = document.querySelectorAll('.to-do-list-section li');
     const newList = document.createElement('li');
@@ -94,7 +94,7 @@ const addToDoList = () => {
         list.classList.add('visible');
     });
 
-    const taskCheckBtn = document.querySelectorAll(".check-task");
+    const taskCheckBtn = document.querySelectorAll('.check-task');
     for(let i = 0; i < taskCheckBtn.length; i++ ){
         taskCheckBtn[i].addEventListener('click', taskCheck);
     }
@@ -111,13 +111,14 @@ const taskCheck = (e) => {
     let target = document.getElementById(handler);
     target.classList.toggle('task-checked');
     updateUi();
-}
+};
+
 const taskRemove = (e) => {
     let handler = e.target.getAttribute('data-handler');
     let target = document.getElementById(handler);
     target.remove();
     updateUi();
-}
+};
 
 
 letsGoBtn.addEventListener('click', openToDoListSectionHandler); // Opens TO DO LIST page
