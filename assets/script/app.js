@@ -51,6 +51,7 @@ const openToDoListSectionHandler = () => {
     homePage.classList.toggle('visible');
     toDoPage.classList.toggle('visible');
     userName.textContent = `${userNameInputValue}`;
+    updateUi();
 };
 
 const toDoListAddModalHandler = () => {

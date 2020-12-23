@@ -310,4 +310,39 @@
             border: 1px solid #ff725e;
             border-left: 10px solid #ff725e; }
 
+@media only screen and (max-width: 425px) {
+  * {
+    font-size: 70%; }
+    * body .main-wrapper {
+      margin: 0 auto;
+      border-radius: 0;
+      height: auto; }
+      * body .main-wrapper .to-do-page-wrapper.visible .fa-plus-circle.visible {
+        z-index: 1000;
+        bottom: -15px; }
+      * body .main-wrapper .to-do-page-wrapper.visible header {
+        margin: 0 10px; }
+        * body .main-wrapper .to-do-page-wrapper.visible header .avatar {
+          width: 115px;
+          height: 100px; }
+        * body .main-wrapper .to-do-page-wrapper.visible header .hello-msg {
+          width: 30rem; }
+          * body .main-wrapper .to-do-page-wrapper.visible header .hello-msg h2 {
+            margin: 10px; }
+          * body .main-wrapper .to-do-page-wrapper.visible header .hello-msg span {
+            font-size: inherit; }
+      * body .main-wrapper .to-do-page-wrapper.visible .progress span {
+        font-size: inherit; }
+      * body .main-wrapper .to-do-page-wrapper.visible .to-do-list-section .to-do-list-add-modal.visible {
+        width: 90%;
+        margin: 0 auto; }
+        * body .main-wrapper .to-do-page-wrapper.visible .to-do-list-section .to-do-list-add-modal.visible .to-do-list-confirmation input[type=button] {
+          width: 10rem;
+          max-width: 40%;
+          height: 3rem; }
+      * body .main-wrapper .to-do-page-wrapper.visible .to-do-list-section li.visible {
+        width: 35rem;
+        max-width: 80%;
+        margin: 0 auto; } }
+
 /*# sourceMappingURL=home.css.map */
