@@ -296,6 +296,8 @@
               white-space: normal; }
             * body .main-wrapper .to-do-page-wrapper.visible .to-do-list-section li.visible h4, * body .main-wrapper .to-do-page-wrapper.visible .to-do-list-section li.visible p, * body .main-wrapper .to-do-page-wrapper.visible .to-do-list-section li.visible .fas {
               font-size: 1.5rem; }
+            * body .main-wrapper .to-do-page-wrapper.visible .to-do-list-section li.visible i {
+              cursor: pointer; }
             * body .main-wrapper .to-do-page-wrapper.visible .to-do-list-section li.visible .check-task {
               position: absolute;
               top: 15px;
