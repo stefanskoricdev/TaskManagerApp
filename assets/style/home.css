@@ -167,7 +167,7 @@
         * body .main-wrapper .to-do-page-wrapper.visible .progress progress[value] {
           /* Reset the default appearance */
           -webkit-appearance: none;
-          -moz-appearance: none;
+          /* -moz-appearance: none; */
           appearance: none;
           /* Get rid of default border in Firefox. */
           border: none;
@@ -182,14 +182,20 @@
           border: 1px solid #ff725e; }
         * body .main-wrapper .to-do-page-wrapper.visible .progress progress[value]::-webkit-progress-value {
           border-radius: 25px;
-          background: -webkit-linear-gradient(135deg, #00bf8c 0%, #00c28e 15%, #fe5d47 85%, #fe6752 100%); }
+          background: -webkit-linear-gradient(135deg, #00bf8c 0%, #00c28e 15%, #fe5d47 85%, #fe6752 100%);
+          -webkit-transition: width 200ms linear;
+          -moz-transition: width 200ms linear;
+          -ms-transition: width 200ms linear;
+          -o-transition: width 200ms linear;
+          transition: width 200ms linear; }
         * body .main-wrapper .to-do-page-wrapper.visible .progress progress[value]::-moz-progress-bar {
           border-radius: 25px;
-          background-color: inherit;
-          border: 1px solid #ff725e; }
-        * body .main-wrapper .to-do-page-wrapper.visible .progress progress[value]::-moz-progress-value {
-          border-radius: 25px;
-          background: -webkit-linear-gradient(135deg, #00bf8c 0%, #00c28e 15%, #fe5d47 85%, #fe6752 100%); }
+          background: -moz-linear-gradient(135deg, #00bf8c 0%, #00c28e 15%, #fe5d47 85%, #fe6752 100%);
+          -webkit-transition: width 200ms linear;
+          -moz-transition: width 200ms linear;
+          -ms-transition: width 200ms linear;
+          -o-transition: width 200ms linear;
+          transition: width 200ms linear; }
         * body .main-wrapper .to-do-page-wrapper.visible .to-do-list-section.visible-background {
           background-image: url("../img/entry_text_icon.svg");
           background-size: contain;
@@ -309,6 +315,8 @@
           * body .main-wrapper .to-do-page-wrapper.visible .to-do-list-section li.task-checked {
             border: 1px solid #ff725e;
             border-left: 10px solid #ff725e; }
+            * body .main-wrapper .to-do-page-wrapper.visible .to-do-list-section li.task-checked .check-task {
+              color: #00bf8c; }
 
 @media only screen and (max-width: 425px) {
   * {

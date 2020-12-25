@@ -214,7 +214,7 @@ $mintGreen: rgba(0, 191, 140, 1);
                     progress[value] {
                         /* Reset the default appearance */
                         -webkit-appearance: none;
-                           -moz-appearance: none;
+                           /* -moz-appearance: none; */
                                 appearance: none;
                         
                         /* Get rid of default border in Firefox. */
@@ -234,16 +234,21 @@ $mintGreen: rgba(0, 191, 140, 1);
                       progress[value]::-webkit-progress-value {
                           border-radius: 25px;
                           background: -webkit-linear-gradient(135deg, rgba(0, 191, 140, 1) 0%, rgba(0, 194, 142, 1) 15%, rgba(254, 93, 71, 1) 85%, rgba(254, 103, 82, 1) 100%);
-                      }
+                          -webkit-transition: width 200ms linear;
+                          -moz-transition: width 200ms linear;
+                          -ms-transition: width 200ms linear;
+                          -o-transition: width 200ms linear;
+                          transition: width 200ms linear;
+                        }
                     progress[value]::-moz-progress-bar{
                         border-radius: 25px;
-                          background-color: inherit;
-                          border: 1px solid $orange;
+                        background: -moz-linear-gradient(135deg, rgba(0, 191, 140, 1) 0%, rgba(0, 194, 142, 1) 15%, rgba(254, 93, 71, 1) 85%, rgba(254, 103, 82, 1) 100%);
+                        -webkit-transition: width 200ms linear;
+                        -moz-transition: width 200ms linear;
+                        -ms-transition: width 200ms linear;
+                        -o-transition: width 200ms linear;
+                        transition: width 200ms linear;
                     }
-                    progress[value]::-moz-progress-value{
-                        border-radius: 25px;
-                        background: -webkit-linear-gradient(135deg, rgba(0, 191, 140, 1) 0%, rgba(0, 194, 142, 1) 15%, rgba(254, 93, 71, 1) 85%, rgba(254, 103, 82, 1) 100%);
-                  }
                 }
                 .to-do-list-section.visible-background{
                     background-image: url('../img/entry_text_icon.svg');
@@ -385,6 +390,9 @@ $mintGreen: rgba(0, 191, 140, 1);
                     li.task-checked{
                         border: 1px solid $orange;
                         border-left: 10px solid $orange;
+                        .check-task{
+                            color: $mintGreen;
+                        }
                     }
                 }
             }
